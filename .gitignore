@@ -32,3 +32,13 @@
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+
+# The .env file is read for both dev and test
+# and creates more problems than it solves, so
+# we never want to use it
+.env
+
+# .env.*.local files are where we put actual
+# secrects we need for dev and test, so
+# we really dont' want them in version control
+.env.*.local

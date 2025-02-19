@@ -40,12 +40,24 @@ gem "thruster", require: false
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 
+# bundler-audit checks our dependincies for vulnerabilities
+gem "bundler-audit"
+
+# lograge changes Rails logging to a more
+# traditional one-liner-per-event format
+gem "lograge"
+
 group :development, :test do
+  # Static analysis for security vulnerabilities [https://brakemanscanner.org/]
+  gem "brakeman", require: false
+
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri windows ], require: "debug/prelude"
 
-  # Static analysis for security vulnerabilities [https://brakemanscanner.org/]
-  gem "brakeman", require: false
+  # All rutime config comes from the UNIX enviroment
+  # but we use dotenv to store that in files for
+  # development and testing
+  gem "dotenv-rails"
 
   # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
   gem "rubocop-rails-omakase", require: false
