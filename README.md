@@ -1,24 +1,27 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Widgets - The App for Widgets
 
-Things you may want to cover:
+## Setup
 
-* Ruby version
+1. Pull down the app from version control
+2. Make sure you have postgres running
+3. `bin/setup`
 
-* System dependencies
+## Running The App
 
-* Configuration
+1. `bin/dev`
 
-* Database creation
+## Tests and CI
 
-* Database initialization
+1. `bin/ci` contains all the tests and checks for the app
+2. `tmp/test.log` will use the production logging format
+    *not* the development one.
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+## Production
 
-* Deployment instructions
-
-* ...
+* All runtime configuration should be supplied
+    in the UNIX environmnet
+* Rails logging uses logrange. `bin/setup help`
+    can tell you how see this locally
