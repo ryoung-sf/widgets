@@ -14,9 +14,9 @@ def setup
   system! "bin/rails db:reset || bin/rails db:migrate"
 
   log "Dropping & recreating the test database"
-  # setting the RAILS_ENV explicityl to be sure
+  # setting the RAILS_ENV explicitly to be sure
   # we actually reset the test database
-  system!({ "RAIL_ENV" => "test"}, "bin/rails db:reset")
+  system!({ "RAILS_ENV" => "test"}, "bin/rails db:reset")
 
   log "All set up."
   log ""
@@ -46,7 +46,7 @@ def help
   puts "  bin/rails test"
   puts "    # run non-system tests"
   puts ""
-  puts "  bin/raisl test:system"
+  puts "  bin/rails test:system"
   puts "    # run system tests"
   puts ""
   puts "  bin/setup help"
