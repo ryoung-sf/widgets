@@ -19,6 +19,10 @@ Rails.application.routes.draw do
 
   get "manufacturer/:id", to: "manufacturers#show"
 
+  if Rails.env.development?
+    resources :design_system_docs, only: [ :index ]
+  end
+
   # Custom routes start here
   #
   # For each new custom route:
