@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :widgets, only: [ :show, :index ]
+  resources :widget_ratings, only: [ :create ]
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
@@ -11,4 +13,21 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
+  namespace :customer_service do
+    resources :widgets, only: [ :show, :update, :destroy ]
+  end
+
+  get "manufacturer/:id", to: "manufacturers#show"
+
+  # Custom routes start here
+  #
+  # For each new custom route:
+  #
+  # * Be sure you have the canonical route declared above
+  # * Add the new custom route below the existing ones
+  # * Document why it's needed
+  # * Explain anything else non-standard
+
+  # Used in podcase ads for the 'amaing' campaign
+  get "/amazing", to: redirect("/widgets")
 end

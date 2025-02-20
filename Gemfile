@@ -47,6 +47,10 @@ gem "bundler-audit"
 # traditional one-liner-per-event format
 gem "lograge"
 
+# View Component is used to manage
+# and test complex view logic
+gem "view_component"
+
 group :development, :test do
   # Static analysis for security vulnerabilities [https://brakemanscanner.org/]
   gem "brakeman", require: false
