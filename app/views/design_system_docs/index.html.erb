@@ -13,10 +13,10 @@
       <%= font_size_css_class %> Font Size
     </p>
     <code>
-      <pre>&lt;p class="<%= font_size_css_class %>"&gt;
-        <%= font_size_css_class %>Font Size
-        &lt;/p&gt;
-      </pre>
+<pre>&lt;p class="<%= font_size_css_class %>"&gt;
+  <%= font_size_css_class %>Font Size
+&lt;/p&gt;
+</pre>
     </code>
   <% end %>
   <h2 id="spacings">Spacing</h2>
@@ -26,10 +26,10 @@
       <div class="dib ba bc-black">
         <div class="dib ba bg-black white ma-<%= size_number %>">
           <code>
-            <pre>&lt;div class="ma-<%= size_number %>"&gt;
-              ma-<%= size_number %>
-              &lt;/div&gt;
-            </pre>
+<pre>&lt;div class="ma-<%= size_number %>"&gt;
+  ma-<%= size_number %>
+&lt;/div&gt;
+</pre>
           </code>
         </div>
       </div>
@@ -40,11 +40,11 @@
     <% @design_system_docs.spacings.each do |size_number| %>
       <div class="dib ba bg-black white pa-<%= size_number %>">
         <code>
-          <pre>
-            &lt;div class="pa-<%= size_number %>"&gt;
-            pa-<%= size_number %>
-            &lt;/div&gt;
-          </pre>
+<pre>
+&lt;div class="pa-<%= size_number %>"&gt;
+  pa-<%= size_number %>
+&lt;/div&gt;
+</pre>
         </code>
     <% end %>
   </section>
@@ -53,22 +53,22 @@
     <h3><%= name.to_s.humanize %></h3>
     <div class="ma-1 f-3 bg-<%= css_class %> white">
       <code>
-        <pre>
-          &lt;div class="bg-<%= css_class %>"&gt;
-          <%= name %> background
-          &lt;/div&gt;
-        </pre>
+<pre>
+&lt;div class="bg-<%= css_class %>"&gt;
+  <%= name %> background
+&lt;/div&gt;
+</pre>
       </code>
     </div>
     <div class="ma-1 f-3 ba
                 bc-<%= css_class %>
                 <%= css_class %> bg-white">
       <code>
-        <pre>
-          &lt;div class="<%= css_class %> bc-<%= css_class %>"&gt;
-          <%= name %> border and text
-          &lt;/div&gt
-        </pre>
+<pre>
+&lt;div class="<%= css_class %> bc-<%= css_class %>"&gt;
+  <%= name %> border and text
+&lt;/div&gt
+</pre>
       </code>
     </div>
   <% end %>
