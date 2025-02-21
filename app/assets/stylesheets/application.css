@@ -90,3 +90,13 @@ code          { font-family: monospace; }
   border-width: thin;
 }
 /* End Utilities */
+
+widget-rating {
+  display: block;
+}
+widget-rating         [role=status] {
+  display: none;
+}
+widget-rating[rating] [role=status] {
+  display: block;
+}
