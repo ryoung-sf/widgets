@@ -28,5 +28,9 @@ module Widgets
       # per-controller helpers
       g.helper false
     end
+
+    # We want to be able to use any feature of our database,
+    # and the SQL format makes that possible
+    config.active_record.schema_format = :sql
   end
 end
