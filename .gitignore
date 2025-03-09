@@ -38,6 +38,9 @@
 # we never want to use it
 .env
 
+# Procfile.dev is generated, so should not be checked in
+Procfile.dev
+
 # .env.*.local files are where we put actual
 # secrects we need for dev and test, so
 # we really dont' want them in version control

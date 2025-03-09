@@ -47,6 +47,9 @@ gem "bundler-audit"
 # traditional one-liner-per-event format
 gem "lograge"
 
+# Sidekiq handles background jobs
+gem "sidekiq"
+
 # View Component is used to manage
 # and test complex view logic
 gem "view_component"
@@ -57,6 +60,14 @@ group :development, :test do
 
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri windows ], require: "debug/prelude"
+
+  # We use FactoryBot in place of fixtures
+  # to generate realistic test data
+  gem "factory_bot_rails"
+
+  # We use Faker to generate values for attributes
+  # in each factory
+  gem "faker"
 
   # All rutime config comes from the UNIX enviroment
   # but we use dotenv to store that in files for
